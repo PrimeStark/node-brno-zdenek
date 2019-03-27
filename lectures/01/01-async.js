@@ -1,3 +1,4 @@
+"use strict"
 const request = require("request-promise")
 
 const BASE_URL = "http://swapi.co/api"
