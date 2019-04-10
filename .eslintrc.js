@@ -6,7 +6,9 @@ module.exports = {
   extends: [
     '@strv/eslint-config-node/v10',
     '@strv/eslint-config-node/optional',
-    '@strv/eslint-config-node/style',
+
+    // it creates conflict with trailing commas/new lines
+    // '@strv/eslint-config-node/style',
   ],
 
   // As of ESLint 4.1, you no longer need to use separate, per-directory .eslintrc.js files and
