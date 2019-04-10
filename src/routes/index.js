@@ -1,20 +1,12 @@
 'use strict'
 
 const Router = require('koa-router')
-const { validate } = require('./utils/validation')
-const log = require('./logger')
-// Users
-// const users = require('./data/users')
-// const userSchema = require('./schemas/userSchema')
-// Articles
-const articles = require('./data/articles')
-const articleSchema = require('./schemas/articleSchema')
+const { validate } = require('../utils/validation')
+const log = require('../utils/logger')
+const articles = require('../data/articles')
+const articleSchema = require('../schemas/articleSchema')
 
 const router = new Router()
-
-router.get('/', ctx => {
-  ctx.body = 'Hi from base route'
-})
 
 // Article routes
 router.get('/articles', ctx => {

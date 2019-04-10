@@ -6,8 +6,8 @@ const koaCompress = require('koa-compress')
 const koaCors = require('kcors')
 const koaBody = require('koa-body')
 // My server functions
-const router = require('./router')
-const log = require('./logger')
+const routes = require('./routes')
+const log = require('./utils/logger')
 const config = require('./config')
 
 const app = new Koa()
@@ -16,7 +16,7 @@ app.use(koaCompress())
 app.use(koaCors())
 app.use(koaBody())
 
-app.use(router)
+app.use(routes)
 
 const services = {
   server: null,
@@ -27,7 +27,8 @@ app.start = async () => {
 
   services.server = await new Promise((resolve, reject) => {
     const listener = app.listen(config.port, err =>
-      err ? reject(err) : resolve(listener))
+      err ? reject(err) : resolve(listener)
+    )
   })
 
   log.info('All services have started')
