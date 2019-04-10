@@ -80,4 +80,19 @@ router.post('/articles', ctx => {
   ctx.body = articles
 })
 
+router.delete('/articles/:id', ctx => {
+  const articleIndex = articles.findIndex(
+    item => item.id === Number(ctx.params.id)
+  )
+
+  if (!articleIndex) {
+    ctx.status = 404
+    log.warn('Article not found')
+    return
+  }
+
+  articles.splice(articleIndex, 1)
+  ctx.body = articles
+})
+
 module.exports = router.routes()
