@@ -5,5 +5,5 @@ const app = require('../../package.json')
 
 module.exports = pino({
   name: app.name,
-  prettyPrint: true,
+  prettyPrint: { colorize: true },
 })
