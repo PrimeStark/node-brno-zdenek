@@ -4,24 +4,12 @@ const schema = {
   type: 'Object',
   required: true,
   properties: {
-    id: {
-      type: 'integer',
-      required: true,
-    },
-    name: {
+    email: {
       type: 'string',
       required: true,
     },
-    nick: {
+    password: {
       type: 'string',
-      required: true,
-    },
-    ability: {
-      type: 'string',
-      required: true,
-    },
-    impairments: {
-      type: 'array',
       required: true,
     },
   },
