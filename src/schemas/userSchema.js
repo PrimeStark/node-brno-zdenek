@@ -1,12 +1,13 @@
 'use strict'
 
-const schema = {
+const login = {
   type: 'Object',
   required: true,
   properties: {
     email: {
       type: 'string',
       required: true,
+      format: 'email',
     },
     password: {
       type: 'string',
@@ -16,5 +17,5 @@ const schema = {
 }
 
 module.exports = {
-  userSchema: schema,
+  login,
 }

@@ -1,5 +1,7 @@
 'use strict'
 const operations = require('../operations/users')
+const { validate } = require('../utils/validation')
+const userSchema = require('../schemas/userSchema')
 
 async function login(ctx) {
   const input = {
@@ -7,7 +9,7 @@ async function login(ctx) {
     password: ctx.request.body.password,
   }
 
-  // validate()
+  validate(userSchema.login, input)
   ctx.body = await operations.login(input)
 }
 
