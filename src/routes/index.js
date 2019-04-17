@@ -9,6 +9,7 @@ const router = new Router()
 router.use(handler.handleErrors)
 
 router.get('/articles', articles.getAll)
+// how does path variables and query params work here?
 router.get('/articles/:id', articles.getById)
 router.post('/articles', articles.create)
 

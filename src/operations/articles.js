@@ -1,16 +1,14 @@
 'use strict'
 
-// const R = require('ramda')
 const errors = require('../utils/errors')
-const articles = require('../data/articles')
+const articleRepo = require('../repositories/articles')
 
 function getAll() {
-  return articles
+  return articleRepo.findAll()
 }
 
 function getById(input) {
-  const article = articles.find(item => item.id === Number(input.id))
-  // const article = R.find(R.propEq('id', input.id), articles)
+  const article = articleRepo.findById(input.id)
 
   if (!article) {
     throw new errors.NotFoundError()
@@ -20,9 +18,7 @@ function getById(input) {
 }
 
 function create(article) {
-  article.id = articles.length + 1
-  articles.push(article)
-  return article
+  return articleRepo.create(article)
 }
 
 module.exports = {
