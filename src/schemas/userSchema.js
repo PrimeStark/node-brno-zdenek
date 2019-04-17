@@ -1,5 +1,13 @@
 'use strict'
 
+const jwtToken = {
+  type: 'Object',
+  required: true,
+  properties: {
+    jwtToken: { type: 'string', required: true },
+  },
+}
+
 const login = {
   type: 'Object',
   required: true,
@@ -17,5 +25,6 @@ const login = {
 }
 
 module.exports = {
+  jwtToken,
   login,
 }

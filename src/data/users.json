@@ -2,15 +2,13 @@
   {
     "id": 1,
     "name": "Tony Stark",
-    "email": "start@industries.com",
-    "password": "Password123!",
-    "disabled": false
+    "email": "stark@industries.com",
+    "password": "Password123!"
   },
   {
     "id": 2,
     "name": "Jarvis",
     "email": "jarvis@jarvis.com",
-    "password": "$2b$10$PeDxa56jdeh93q.6YsO3hOBVsF3NWKG78Of7830XD0fufLYS7G8Va",
-    "disabled": false
+    "password": "$2b$10$PeDxa56jdeh93q.6YsO3hOBVsF3NWKG78Of7830XD0fufLYS7G8Va"
   }
 ]

@@ -14,6 +14,17 @@ function findByEmail(email) {
   return user
 }
 
+function findById(id) {
+  const user = R.find(R.propEq('id', id), users)
+
+  if (!user) {
+    throw new errors.NotFoundError()
+  }
+
+  return user
+}
+
 module.exports = {
   findByEmail,
+  findById,
 }
