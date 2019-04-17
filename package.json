@@ -19,18 +19,23 @@
   "author": "Zdenek Spacek",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PrimeStark/nnode-brno-zdenek/issues"
+    "url": "https://github.com/PrimeStark/node-brno-zdenek/issues"
   },
   "homepage": "https://github.com/PrimeStark/node-brno-zdenek#readme",
   "devDependencies": {
-    "@strv/eslint-config-node": "^1.0.1",
-    "eslint": "^5.15.3",
-    "nodemon": "^1.18.10",
-    "pino-pretty": "^2.5.0"
+    "@strv/eslint-config-node": "^1.0.4",
+    "eslint": "^5.16.0",
+    "nodemon": "^1.18.11",
+    "pino-pretty": "^2.6.0"
   },
   "dependencies": {
-    "pino": "^5.12.0",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.4"
+    "jsonschema": "^1.2.4",
+    "kcors": "^2.2.2",
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-compress": "^3.0.0",
+    "koa-router": "^7.4.0",
+    "pino": "^5.12.2",
+    "ramda": "^0.26.1"
   }
 }

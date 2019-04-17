@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Thomas Fairclough",
+    "nick": "Tom",
+    "ability": "Speach",
+    "impairments": ["Blind", "Deaf"]
+  },
+  {
+    "id": 2,
+    "name": "Richard Mason",
+    "nick": "Dick",
+    "ability": "Eyesight",
+    "impairments": ["Deaf", "Dumb"]
+  },
+  {
+    "id": 3,
+    "name": "Harold Walker",
+    "nick": "Harry",
+    "ability": "Hear",
+    "impairments": ["Blind", "Dumb"]
+  }
+]
