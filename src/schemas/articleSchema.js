@@ -1,14 +1,27 @@
 'use strict'
 
-const schema = {
+const articleId = {
   type: 'Object',
   required: true,
   properties: {
     id: {
       type: 'integer',
       required: true,
+      min: 1,
+      max: 10000,
     },
-    text: {
+  },
+}
+
+const article = {
+  type: 'Object',
+  required: true,
+  properties: {
+    title: {
+      type: 'string',
+      required: true,
+    },
+    content: {
       type: 'string',
       required: true,
     },
@@ -16,5 +29,6 @@ const schema = {
 }
 
 module.exports = {
-  articleSchema: schema,
+  articleId,
+  article,
 }

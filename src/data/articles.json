@@ -1,14 +1,17 @@
 [
   {
     "id": 1,
-    "text": "Some text"
+    "title": "Hi There",
+    "content": "Post numero uno"
   },
   {
     "id": 2,
-    "text": "Some more text"
+    "title": "Hiho",
+    "content": "Post numer zwei"
   },
   {
     "id": 3,
-    "text": "So much text"
+    "title": "Ola",
+    "content": "GLHF!"
   }
 ]
