@@ -24,7 +24,29 @@ const login = {
   },
 }
 
+const signUp = {
+  type: "Object",
+  required: true,
+  properties: {
+    name: {
+      type: 'string',
+      required: true,
+      pattern: '^[A-Za-z. -]+$',
+    },
+    email: {
+      type: 'string',
+      required: true,
+      format: 'email',
+    },
+    password: {
+      type: 'string',
+      required: true,
+    },
+  }
+}
+
 module.exports = {
   jwtToken,
   login,
+  signUp
 }

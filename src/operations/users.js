@@ -5,6 +5,27 @@ const userRepo = require('../repositories/users')
 const errors = require('../utils/errors')
 const crypto = require('../utils/crypto')
 
+async function signUp(input) {
+  logger.info({ input }, "Signup has started")
+  const user = {
+    name: input.name,
+    email: input.email,
+    // TODO: hash pasword
+    password: await crypto.hashPassword(input.password)
+  }
+
+  const checkExisting = await userRepo.findByEmail(user.email.toLowerCase())
+  if (checkExisting) {
+    throw new errors.ConflictError("User with this email already exists.")
+  }
+
+  const createdUser = userRepo.create(user)
+  createdUser.accessToken = await crypto.generateAccessToken(createdUser.id)
+
+  logger.info("Signup has ended")
+  return createdUser
+}
+
 async function login(input) {
   logger.info({ input }, 'Login has started')
   const user = await userRepo.findByEmail(input.email.toLowerCase())
@@ -57,4 +78,5 @@ async function verifyTokenPayload(input) {
 module.exports = {
   login,
   verifyTokenPayload,
+  signUp
 }

@@ -26,10 +26,11 @@ function verifyAccessToken(authToken) {
 }
 
 function hashPassword(password) {
-  return bcrypt.hash(pepperify(password), config.auth.createOptions)
+  return bcrypt.hash(pepperify(password), config.auth.saltRounds)
 }
 
 function comparePasswords(plaintext, ciphertext) {
+  // if pass is not hashed in DB it will fail on compare
   return bcrypt.compare(pepperify(plaintext), ciphertext)
 }
 
