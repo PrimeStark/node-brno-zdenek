@@ -1,32 +1,52 @@
 'use strict'
 
-const schema = {
+const jwtToken = {
   type: 'Object',
   required: true,
   properties: {
-    id: {
-      type: 'integer',
-      required: true,
-    },
-    name: {
+    jwtToken: { type: 'string', required: true },
+  },
+}
+
+const login = {
+  type: 'Object',
+  required: true,
+  properties: {
+    email: {
       type: 'string',
       required: true,
+      format: 'email',
     },
-    nick: {
+    password: {
       type: 'string',
-      required: true,
-    },
-    ability: {
-      type: 'string',
-      required: true,
-    },
-    impairments: {
-      type: 'array',
       required: true,
     },
   },
 }
 
+const signUp = {
+  type: "Object",
+  required: true,
+  properties: {
+    name: {
+      type: 'string',
+      required: true,
+      pattern: '^[A-Za-z. -]+$',
+    },
+    email: {
+      type: 'string',
+      required: true,
+      format: 'email',
+    },
+    password: {
+      type: 'string',
+      required: true,
+    },
+  }
+}
+
 module.exports = {
-  userSchema: schema,
+  jwtToken,
+  login,
+  signUp
 }

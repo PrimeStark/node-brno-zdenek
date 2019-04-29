@@ -1,23 +1,14 @@
 [
   {
     "id": 1,
-    "name": "Thomas Fairclough",
-    "nick": "Tom",
-    "ability": "Speach",
-    "impairments": ["Blind", "Deaf"]
+    "name": "Tony Stark",
+    "email": "stark@industries.com",
+    "password": "Password123!"
   },
   {
     "id": 2,
-    "name": "Richard Mason",
-    "nick": "Dick",
-    "ability": "Eyesight",
-    "impairments": ["Deaf", "Dumb"]
-  },
-  {
-    "id": 3,
-    "name": "Harold Walker",
-    "nick": "Harry",
-    "ability": "Hear",
-    "impairments": ["Blind", "Dumb"]
+    "name": "Jarvis",
+    "email": "jarvis@jarvis.com",
+    "password": "$2b$10$PeDxa56jdeh93q.6YsO3hOBVsF3NWKG78Of7830XD0fufLYS7G8Va"
   }
 ]

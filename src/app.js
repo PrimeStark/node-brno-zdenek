@@ -26,11 +26,12 @@ app.start = async () => {
   log.info('Server starting')
 
   services.server = await new Promise((resolve, reject) => {
-    const listener = app.listen(config.port, err =>
+    const listener = app.listen(config.server.port, err =>
       err ? reject(err) : resolve(listener)
     )
   })
 
+  log.info(`Server listening on port ${config.server.port}.`)
   log.info('All services have started')
 }
 
